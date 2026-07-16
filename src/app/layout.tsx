@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { LayoutRoot } from "@/components/layout/layout-root";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <LayoutRoot>{children}</LayoutRoot>
+      </body>
     </html>
   );
 }
