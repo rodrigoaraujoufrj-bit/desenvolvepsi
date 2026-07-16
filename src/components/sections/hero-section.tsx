@@ -19,16 +19,16 @@ const trustIndicators = [
 function HeroSection() {
   const reduceMotion = useReducedMotion();
   const contentMotion = reduceMotion
-    ? {}
+    ? { initial: false as const }
     : {
-        initial: { opacity: 0, y: 18, filter: "blur(3px)" },
-        animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+        initial: false as const,
+        animate: { opacity: 1, y: 0 },
         transition: { duration: 0.34, ease: motionEase },
       };
   const visualMotion = reduceMotion
-    ? {}
+    ? { initial: false as const }
     : {
-        initial: { opacity: 0, y: 14, scale: 0.98 },
+        initial: false as const,
         animate: { opacity: 1, y: 0, scale: 1 },
         transition: { duration: 0.38, delay: 0.08, ease: motionEase },
       };
