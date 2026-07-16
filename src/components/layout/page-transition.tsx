@@ -17,8 +17,8 @@ function PageTransition({ children }: PageTransitionProps) {
   return (
     <m.div
       key={pathname}
-      initial={reduceMotion ? false : { opacity: 0, y: 8, filter: "blur(2px)" }}
-      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      initial={false}
+      animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
