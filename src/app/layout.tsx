@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "DesenvolvePsi",
-  description: "Fundacao tecnica do projeto DesenvolvePsi.",
+  description: "Fundacao visual do projeto DesenvolvePsi.",
 };
 
 export default function RootLayout({
