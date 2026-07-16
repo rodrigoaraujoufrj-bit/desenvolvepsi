@@ -1,7 +1,7 @@
 import type * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
-import { Container } from "@/components/layout/container";
+import { MaxWidthContainer } from "@/components/layout/max-width-container";
 import { cn } from "@/lib/utils";
 
 const sectionContainerVariants = cva("w-full", {
@@ -27,8 +27,8 @@ export interface SectionContainerProps
   extends React.HTMLAttributes<HTMLElement>, VariantProps<typeof sectionContainerVariants> {
   /** Conteudo estrutural da area. */
   children: React.ReactNode;
-  /** Largura maxima herdada do componente Container. */
-  containerSize?: React.ComponentProps<typeof Container>["size"];
+  /** Largura maxima herdada do componente MaxWidthContainer. */
+  containerSize?: React.ComponentProps<typeof MaxWidthContainer>["size"];
 }
 
 /** Container vertical para ritmo e espacamento global, sem definir conteudo de landing. */
@@ -46,7 +46,7 @@ function SectionContainer({
       className={cn(sectionContainerVariants({ spacing, tone, className }))}
       {...props}
     >
-      <Container size={containerSize}>{children}</Container>
+      <MaxWidthContainer size={containerSize}>{children}</MaxWidthContainer>
     </section>
   );
 }

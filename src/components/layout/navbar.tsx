@@ -4,7 +4,7 @@ import { useEffect, useId, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, m, useReducedMotion } from "motion/react";
 
-import { Container } from "@/components/layout/container";
+import { MaxWidthContainer } from "@/components/layout/max-width-container";
 import { useScrollState } from "@/components/layout/scroll-provider";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -36,7 +36,7 @@ function Navbar() {
           : "border-b border-transparent bg-transparent",
       )}
     >
-      <Container size="wide" className="flex h-20 items-center justify-between gap-6">
+      <MaxWidthContainer size="wide" className="flex h-20 items-center justify-between gap-6">
         <button
           type="button"
           className="rounded-md text-lg font-semibold text-foreground outline-none transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
@@ -71,7 +71,7 @@ function Navbar() {
         >
           {isOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
-      </Container>
+      </MaxWidthContainer>
 
       <AnimatePresence>
         {isOpen ? (
