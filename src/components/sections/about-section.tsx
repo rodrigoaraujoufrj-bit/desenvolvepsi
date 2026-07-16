@@ -8,6 +8,7 @@ import {
   HeartHandshake,
   Landmark,
   Layers3,
+  MessageCircleHeart,
   ShieldCheck,
   Sparkles,
   Stethoscope,
@@ -93,19 +94,23 @@ function AboutSection() {
       };
 
   return (
-    <section id="sobre" className="overflow-hidden bg-background py-16 sm:py-20 lg:py-28">
+    <section
+      id="sobre"
+      className="overflow-hidden bg-[linear-gradient(180deg,theme(colors.background)_0%,theme(colors.accent/0.28)_46%,theme(colors.background)_100%)] py-16 sm:py-20 lg:py-28"
+    >
       <MaxWidthContainer size="wide">
-        <div className="grid gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:gap-16">
+        <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-16">
           <m.div className="relative order-1 lg:order-none" {...sectionMotion}>
-            <div className="relative mx-auto min-h-[28rem] w-full max-w-[34rem] sm:min-h-[34rem] lg:min-h-[42rem]">
-              <div className="absolute inset-x-5 bottom-4 top-8 rounded-[2rem] border border-border bg-card/80 shadow-soft backdrop-blur-sm sm:inset-x-8 sm:bottom-8 sm:top-10" />
-              <div className="absolute left-2 top-10 h-44 w-52 rounded-[55%_45%_49%_51%/45%_52%_48%_55%] border border-primary/15 bg-accent/50" />
-              <div className="absolute bottom-4 right-4 h-48 w-60 rounded-[45%_55%_56%_44%/52%_45%_55%_48%] border border-secondary/15 bg-secondary/10" />
+            <div className="relative mx-auto min-h-[31rem] w-full max-w-[34rem] sm:min-h-[36rem] lg:min-h-[43rem]">
+              <div className="absolute inset-x-5 bottom-4 top-8 rounded-[2rem] border border-border bg-card/82 shadow-soft backdrop-blur-sm sm:inset-x-8 sm:bottom-8 sm:top-10" />
+              <div className="absolute left-1 top-8 h-48 w-56 rounded-[55%_45%_49%_51%/45%_52%_48%_55%] border border-primary/15 bg-accent/60 blur-[1px]" />
+              <div className="absolute bottom-3 right-2 h-52 w-64 rounded-[45%_55%_56%_44%/52%_45%_55%_48%] border border-secondary/15 bg-secondary/10 blur-[1px]" />
+              <div className="absolute right-10 top-16 h-24 w-24 rounded-full bg-primary/10 blur-2xl" />
 
               <figure
                 role="img"
                 aria-label="Espaço reservado para fotografia profissional de Ricardo"
-                className="absolute inset-x-9 bottom-14 top-4 overflow-hidden rounded-lg border border-border bg-background shadow-soft sm:inset-x-14 sm:bottom-20"
+                className="absolute inset-x-8 bottom-16 top-3 overflow-hidden rounded-lg border border-border bg-background shadow-soft sm:inset-x-14 sm:bottom-20"
               >
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,theme(colors.accent/0.7)_0%,theme(colors.card)_48%,theme(colors.background)_100%)]" />
                 <div className="absolute left-1/2 top-[12%] h-60 w-[76%] -translate-x-1/2 rounded-[48%_52%_44%_56%/52%_46%_54%_48%] bg-primary/12 blur-2xl" />
@@ -119,7 +124,7 @@ function AboutSection() {
 
               <Card
                 variant="default"
-                className="absolute left-0 top-16 max-w-[13rem] bg-card/92 p-4 backdrop-blur-sm sm:left-2"
+                className="absolute left-0 top-16 max-w-[13.5rem] bg-card/92 p-4 backdrop-blur-sm sm:left-2"
               >
                 <div className="flex items-start gap-3">
                   <IconWrapper variant="secondary" size="sm">
@@ -135,33 +140,57 @@ function AboutSection() {
                   </div>
                 </div>
               </Card>
+
+              <Card
+                variant="default"
+                className="absolute bottom-2 right-0 max-w-[14rem] bg-card/92 p-4 backdrop-blur-sm sm:bottom-10 sm:right-2"
+              >
+                <div className="flex items-start gap-3">
+                  <IconWrapper variant="primary" size="sm">
+                    <MessageCircleHeart aria-hidden="true" />
+                  </IconWrapper>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.08em] text-primary">
+                      Abordagem
+                    </p>
+                    <p className="mt-1 text-sm font-semibold leading-5 text-foreground">
+                      Histórico Cultural
+                    </p>
+                  </div>
+                </div>
+              </Card>
             </div>
           </m.div>
 
           <m.div className="order-2 space-y-10 lg:order-none" {...sectionMotion}>
-            <div className="max-w-3xl">
+            <div className="max-w-[620px]">
               <Badge variant="primary" className="px-3 py-1.5">
                 <Sparkles aria-hidden="true" className="size-3.5" />
-                Sobre Ricardo
+                Conheça o profissional
               </Badge>
 
               <div className="mt-6 space-y-5">
                 <h2 className="text-balance text-3xl font-semibold leading-tight text-foreground sm:text-4xl lg:text-5xl">
-                  Experiência acadêmica e presença clínica para acompanhar histórias reais.
+                  Uma escuta cuidadosa para compreender sua história com profundidade.
                 </h2>
+                <p className="text-lg leading-8 text-muted-foreground sm:text-xl sm:leading-8">
+                  Ricardo une formação acadêmica sólida, experiência clínica e uma presença
+                  acessível para acolher pessoas em momentos de dúvida, conflito e mudança.
+                </p>
                 <div className="space-y-4 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
                   <p>
-                    Ricardo conduz o atendimento como um espaço de escuta qualificada, cuidado e
-                    construção de sentido para quem deseja compreender melhor sua própria história.
+                    O atendimento nasce de uma pergunta simples: o que em sua história precisa ser
+                    escutado com mais cuidado agora?
                   </p>
                   <p>
-                    Sua atuação articula formação acadêmica sólida, Psicologia Histórico Cultural e
-                    atenção ao contexto de vida de cada pessoa, sem respostas prontas ou promessas
-                    simplistas.
+                    A partir da Psicologia Histórico Cultural, Ricardo considera vínculos, contexto,
+                    desenvolvimento e experiências concretas, sem reduzir o sofrimento a explicações
+                    prontas.
                   </p>
                   <p>
-                    O objetivo é oferecer uma experiência clara, humana e ética para adultos,
-                    casais, famílias e crianças que buscam apoio profissional.
+                    A proposta é construir um espaço claro e ético, no qual adultos, casais,
+                    famílias e crianças possam encontrar orientação profissional sem perder a
+                    própria singularidade.
                   </p>
                 </div>
               </div>
